@@ -10,8 +10,7 @@ function App() {
       <div className="jumbotron">
         <h1 className="display-3">{title}</h1>
       </div>
-      <Article article={article[0]} />
-      <Article article={article[1]} />
+      <Article article={article} />
     </div>
   );
 }

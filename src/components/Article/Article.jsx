@@ -1,53 +1,25 @@
-// import React, { Component } from "react";
-// import "./Article.css";
+import React from "react";
+import "./Article.css";
+import ArticleButton from "../ArticleButton/ArticleButton";
 
-// class Article extends Component {
-//   // Первый способ задания состояния
-//   // constructor(props) {
-//   //   super(props);
+function Article(props) {
+  const { article } = props;
 
-//   //   this.state = {
-//   //     isShow: true,
-//   //   };
-//   // }
+  const articleList = article.map((articleItem) => (
+    <div key={articleItem.id} className="card">
+      <div className="card-header">
+        <h2>{articleItem.subtitle}</h2>
+      </div>
 
-//   // Второй способ задания состояния
-//   state = {
-//     isShow: true,
-//   };
+      <div className="card-body">
+        <section className="body">{articleItem.text}</section>
 
-//   render() {
-//     const { article } = this.props;
+        <ArticleButton />
+      </div>
+    </div>
+  ));
 
-//     if (!this.state.isShow)
-//       return (
-//         <button className="btn btn-primary btn-lg" onClick={this.hideContent}>
-//           {this.state.isShow ? "Скрыть" : "Показать"}
-//         </button>
-//       );
+  return <ul className="card__list">{articleList}</ul>;
+}
 
-//     return (
-//       <div className="card">
-//         <div className="card-header">
-//           <h2>{article.subtitle}</h2>
-//         </div>
-
-//         <div className="card-body">
-//           <section className="body">{article.text}</section>
-
-//           <button className="btn btn-primary btn-lg" onClick={this.hideContent}>
-//             {this.state.isShow ? "Скрыть" : "Показать"}
-//           </button>
-//         </div>
-//       </div>
-//     );
-//   }
-
-//   hideContent = (event) => {
-//     this.setState({
-//       isShow: !this.state.isShow,
-//     });
-//   };
-// }
-
-// export default Article;
+export default Article;

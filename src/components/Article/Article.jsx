@@ -1,6 +1,6 @@
 import React from "react";
 import "./Article.css";
-import ArticleButton from "../ArticleButton/ArticleButton";
+import ArticleButton from "./ArticleButton/ArticleButton";
 
 function Article(props) {
   const { article } = props;

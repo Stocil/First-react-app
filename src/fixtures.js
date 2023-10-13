@@ -24,6 +24,11 @@ const article = [
     subtitle: "Article fifth subtitle",
     text: "Amet risus nullam eget felis eget nunc lobortis mattis. Mollis nunc sed id semper. Hac habitasse platea dictumst quisque sagittis purus sit amet volutpat. Nibh mauris cursus mattis molestie. Netus et malesuada fames ac.",
   },
+  {
+    id: 6,
+    subtitle: "Article six subtitle",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  },
 ];
 
 export default article;

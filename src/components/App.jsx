@@ -1,6 +1,6 @@
 import React from "react";
 import article from "../fixtures";
-import Article from "./Article/Article";
+import ArticleList from "./ArticleList/ArticleList";
 import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <div className="jumbotron">
         <h1 className="display-3">{title}</h1>
       </div>
-      <Article article={article} />
+      <ArticleList articles={article} />
     </div>
   );
 }

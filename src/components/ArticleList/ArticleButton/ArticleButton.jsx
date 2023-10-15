@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ArticleButton.css";
 
-function ArticleButton({ click }) {
-  const [count, setCount] = useState(0);
+function ArticleButton(props) {
+  // const [count, setCount] = useState(0);
+
+  const { click, counts } = props;
+  const count = counts.count;
+  const setCount = counts.setCount;
 
   function handleClick(e) {
     setCount(count + 1);

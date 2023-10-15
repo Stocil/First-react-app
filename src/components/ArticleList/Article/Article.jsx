@@ -5,6 +5,7 @@ import ArticleButton from "../ArticleButton/ArticleButton";
 function Article(props) {
   const { article } = props;
   const [isShow, setIsShow] = useState(true);
+  const [count, setCount] = useState(0);
 
   function handleClick() {
     setIsShow(!isShow);
@@ -20,7 +21,7 @@ function Article(props) {
         <div className="card-body">
           <section className="body">{article.text}</section>
 
-          <ArticleButton click={handleClick} />
+          <ArticleButton click={handleClick} counts={{ count, setCount }} />
         </div>
       </div>
     );
@@ -28,7 +29,7 @@ function Article(props) {
     return (
       <div className="card">
         <div className="card-body">
-          <ArticleButton click={handleClick} />
+          <ArticleButton click={handleClick} counts={{ count, setCount }} />
         </div>
       </div>
     );
